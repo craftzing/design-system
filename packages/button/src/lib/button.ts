@@ -1,9 +1,9 @@
 import { CSSResultGroup } from 'lit';
 import { html, literal } from 'lit/static-html.js';
-import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { property } from 'lit/decorators.js';
 import { spread } from '@open-wc/lit-helpers';
+import classNames from 'classnames';
 
 import { CraftzingElement, createStyles } from '@design-system/common';
 
@@ -44,26 +44,21 @@ class CZButton extends CraftzingElement {
     const tag = this.href ? literal`a` : literal`button`;
 
     return html`<${tag}
-      class="${classMap({
-        button: true,
-        'button--appearance-default': this.appearance === 'default',
-        'button--appearance-primary': this.appearance === 'primary',
-        'button--appearance-secondary': this.appearance === 'secondary',
-        'button--appearance-tertiary': this.appearance === 'tertiary',
-        'button--size-sm': this.size === 'sm',
-        'button--size-lg': this.size === 'lg',
-        'button--width-full': this.width === 'full',
-        'is-disabled': !!(this.disabled),
-      })}"
+      ${spread(this.undeclaredAttributes)}
+      class="${classNames([
+       'button',
+        `button--appearance-${this.appearance}`,
+        `button--size-${this.size}`,
+        `button--width-${this.width}`,
+      ])}"
       href="${ifDefined(this.href && !this.disabled ? this.href : undefined)}"
       ?disabled="${this.disabled}"
       part="base"
-      ${spread(this.undeclaredAttributes)}
     >
-      <span className="button__content" part="content">
+      <span class="button__content" part="content">
         <slot></slot>
       </span>
-    </button>`;
+    </${tag}>`;
   }
 }
 
