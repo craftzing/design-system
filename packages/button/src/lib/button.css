@@ -1,0 +1,37 @@
+:host {
+  box-sizing: border-box;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  --btn-transition: all 0.2s ease-in-out 0s;
+  transition: var(--btn-transition);
+
+  border: var(--px-border-m) solid transparent;
+
+  --slotted-icon-size: var(--px-icon-size-xs-mobile);
+
+  &:hover:not([disabled], [aria-disabled='true']),
+  &:focus:not([disabled], [aria-disabled='true']) {
+    border-color: var(--px-color-border-action-hover-default);
+    outline: 0;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:where([disabled], [aria-disabled='true']) {
+    cursor: default;
+    pointer-events: none;
+  }
+}

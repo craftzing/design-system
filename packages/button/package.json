@@ -33,6 +33,9 @@
     }
   },
   "dependencies": {
-    "@swc/helpers": "~0.5.11"
+    "@swc/helpers": "~0.5.11",
+    "lit": "^3.2.1",
+    "@open-wc/lit-helpers": "^0.7.0",
+    "@design-system/common": "*"
   }
 }

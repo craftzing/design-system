@@ -11,6 +11,7 @@
     "@nx/js": "20.4.2",
     "@nx/vite": "20.4.2",
     "@nx/web": "20.4.2",
+    "@open-wc/lit-helpers": "^0.7.0",
     "@open-wc/testing": "^4.0.0",
     "@open-wc/testing-helpers": "^3.0.1",
     "@swc-node/register": "~1.9.1",
