@@ -4,44 +4,30 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { property } from 'lit/decorators.js';
 import { spread } from '@open-wc/lit-helpers';
 import classNames from 'classnames';
+import { CZButtonProps, CZButtonAppearance, CZButtonSize } from './button.types.js';
 
 import { CraftzingElement, createStyles } from '@design-system/common';
 
-// import { ChLoader } from '../loader/loader.component.ts';
-// import { ChIcon } from '../icon/icon.component.ts';
+import buttonStyle from './button.css?inline';
 
-import buttonStyle from "./button.css?inline";
-
-/**
- * @tag cz-button
- * @summary Buttons indicate possible actions or choices to a user.
- *
- * @csspart base - The component's base wrapper.
- * @csspart content - The component's content.
- */
-class CZButton extends CraftzingElement {
+class CZButton extends CraftzingElement implements CZButtonProps {
   static styles:CSSResultGroup = createStyles(buttonStyle);
 
-  @property({ type: String, reflect: true })
-  appearance: 'default' | 'primary' | 'secondary' | 'tertiary' | undefined = 'default';
+  @property({ reflect: true })
+  appearance: CZButtonAppearance = "default";
 
   @property({ type: String, reflect: true })
-  size: "sm" | "lg" | undefined = "lg";
+  size: CZButtonSize = "large";
 
   @property({ type: String, reflect: true })
-  width: "auto" | "full" | undefined = "auto";
+  href = undefined;
 
-  @property({ type: String, reflect: true })
-  href: string | undefined;
-
-  // static dependencies = {
-  //   'ch-loader': ChLoader,
-  //   'ch-icon': ChIcon,
-  // };
+  @property({ type: Boolean, reflect: true })
+  disabled = false;
 
   render() {
-    // const iconSize = this.size === 'sm' ? 'sm' : 'md';
     const tag = this.href ? literal`a` : literal`button`;
+    console.log(this.disabled);
 
     return html`<${tag}
       ${spread(this.undeclaredAttributes)}
@@ -49,7 +35,6 @@ class CZButton extends CraftzingElement {
        'button',
         `button--appearance-${this.appearance}`,
         `button--size-${this.size}`,
-        `button--width-${this.width}`,
       ])}"
       href="${ifDefined(this.href && !this.disabled ? this.href : undefined)}"
       ?disabled="${this.disabled}"

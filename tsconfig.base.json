@@ -5,6 +5,9 @@
     "emitDeclarationOnly": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "include": [
+      "./env.d.ts",
+    ],
     "isolatedModules": true,
     "lib": ["es2022", "DOM", "DOM.Iterable"],
     "module": "nodenext",
@@ -22,6 +25,7 @@
     ],
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2022"
+    "target": "es2022",
+    "useDefineForClassFields": false,
   }
 }
