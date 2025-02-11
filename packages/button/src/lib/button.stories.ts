@@ -1,8 +1,8 @@
 import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
-import { CZButton } from './button.component.ts';
-import { CZButtonProps } from './button.types.ts';
+import { CZButton } from './button.component.js';
+import { CZButtonProps } from './button.types.js';
 
 CZButton.define('cz-button');
 
