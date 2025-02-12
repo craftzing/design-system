@@ -27,7 +27,6 @@ class CZButton extends CraftzingElement implements CZButtonProps {
 
   render() {
     const tag = this.href ? literal`a` : literal`button`;
-    console.log(this.disabled);
 
     return html`<${tag}
       ${spread(this.undeclaredAttributes)}

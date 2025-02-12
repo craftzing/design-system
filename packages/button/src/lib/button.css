@@ -11,9 +11,7 @@
   cursor: pointer;
   text-decoration: none;
 
-  --btn-transition: all 0.2s ease-in-out 0s;
-  transition: var(--btn-transition);
-
+  transition: all 0.2s ease-in-out 0s;
   border: 0.125rem solid transparent;
 
   &:active {
