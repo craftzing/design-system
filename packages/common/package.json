@@ -33,6 +33,7 @@
     }
   },
   "dependencies": {
-    "@swc/helpers": "~0.5.11"
+    "@swc/helpers": "~0.5.11",
+    "lit": "^3.2.1"
   }
 }
