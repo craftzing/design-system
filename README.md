@@ -1,90 +1,68 @@
 # DesignSystem
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+This repository contains an example setup for a web components-based design system.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Getting started
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
-
-## Finish your CI setup
-
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/cg76PZN3RL)
-
-
-## Generate a library
-
-```sh
-npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
-```
-
-## Run tasks
-
-To build the library use:
-
-```sh
-npx nx build pkg1
-```
-
-To run any task with Nx use:
-
-```sh
-npx nx <target> <project-name>
-```
-
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Versioning and releasing
-
-To version and release the library use
+1. Clone this repository.
 
 ```
-npx nx release
+git clone git@github.com:craftzing/design-system.git
+cd design-system
 ```
 
-Pass `--dry-run` to see what would happen without actually releasing the library.
+2. Install dependencies
 
-[Learn more about Nx release &raquo;](hhttps://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Keep TypeScript project references up to date
-
-Nx automatically updates TypeScript [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in `tsconfig.json` files to ensure they remain accurate based on your project dependencies (`import` or `require` statements). This sync is automatically done when running tasks such as `build` or `typecheck`, which require updated references to function correctly.
-
-To manually trigger the process to sync the project graph dependencies information to the TypeScript project references, run the following command:
-
-```sh
-npx nx sync
+```
+npm install
 ```
 
-You can enforce that the TypeScript project references are always in the correct state when running in CI by adding a step to your CI job configuration that runs the following command:
+## Usage
 
-```sh
-npx nx sync:check
+### Storybook
+
+Storybook provides an isolated environment to develop and test UI components in a design system. It allows for interactive documentation and testing of components.
+
+Storybook is set up in a separate lib and will render a collection of all components in the monorepo.
+
+Start storybook development environment.
+
+```
+npm run storybook
 ```
 
-[Learn more about nx sync](https://nx.dev/reference/nx-commands#sync)
+Build your storybook instance.
 
+```
+npm run build-storybook
+```
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### NX
 
-## Install Nx Console
+[NX](https://nx.dev/) is a powerful monorepo tool that helps developers manage multiple projects efficiently. It provides a structured, scalable, and optimized workflow for developing and maintaining a design system.
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+Run the following command to create a new lib.
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```
+npx nx g @nx/js:lib libs/mylib
+```
 
-## Useful links
+### Lit
 
-Learn more:
+This library uses [Lit](https://lit.dev/) to build components.
 
-- [Learn more about this workspace setup](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+[Lit](https://lit.dev/) is a simple yet powerful library for building fast, lightweight, and reusable web components. It builds upon the Web Components standard and offers an efficient rendering system with minimal boilerplate code.
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+See [button](./packages/button/src/lib/button.component.ts) component for a complete example.
+
+## Chromatic
+
+[Chromatic](https://www.chromatic.com/) is a visual testing and review platform for UI components. It enables developers to catch visual regressions early by comparing UI snapshots over time.
+
+Create a new build.
+
+```
+npm run chromatic
+```
+
+Review UI changes in the Chromatic [dashboard](https://www.chromatic.com/builds?appId=67d2f3a4c2b97f80915a2be2).
