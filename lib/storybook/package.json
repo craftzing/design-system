@@ -13,5 +13,24 @@
     },
     "./package.json": "./package.json"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "nx": {
+    "targets": {
+      "build-storybook": {
+        "executor": "@nx/storybook:build",
+        "outputs": [
+          "{options.outputDir}"
+        ],
+        "options": {
+          "outputDir": "dist/storybook",
+          "configDir": "lib/storybook/.storybook"
+        },
+        "configurations": {
+          "ci": {
+            "quiet": true
+          }
+        }
+      }
+    }
+  }
 }

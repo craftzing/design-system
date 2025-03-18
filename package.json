@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "storybook": "nx storybook storybook",
-    "build-storybook": "nx build-storybook storybook -o dist/storybook",
-    "chromatic": "npx chromatic --project-token=chpt_d1ba5a173511f3e -d=lib/storybook/dist/storybook"
+    "build-storybook": "nx build-storybook storybook",
+    "chromatic": "npx chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed --exit-zero-on-changes"
   },
   "private": true,
   "devDependencies": {
