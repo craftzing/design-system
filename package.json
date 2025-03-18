@@ -2,7 +2,11 @@
   "name": "@design-system/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "storybook": "nx storybook storybook",
+    "build-storybook": "nx build-storybook storybook",
+    "chromatic": "npx chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed"
+  },
   "private": true,
   "devDependencies": {
     "@eslint/js": "^9.8.0",
@@ -30,6 +34,7 @@
     "@types/node": "18.16.9",
     "@vitest/coverage-v8": "^1.0.4",
     "@vitest/ui": "^1.3.1",
+    "chromatic": "^11.27.0",
     "classnames": "^2.5.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.0.0",
