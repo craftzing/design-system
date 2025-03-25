@@ -28,7 +28,7 @@
       "path": "../common/tsconfig.lib.json"
     },
     {
-      "path": "../../lib/styles/tsconfig.lib.json"
+      "path": "../../libs/styles/tsconfig.lib.json"
     }
   ]
 }
