@@ -4,20 +4,24 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { property } from 'lit/decorators.js';
 import { spread } from '@open-wc/lit-helpers';
 import classNames from 'classnames';
-import { CZButtonProps, CZButtonAppearance, CZButtonSize } from './button.types.js';
+import {
+  CZButtonProps,
+  CZButtonAppearance,
+  CZButtonSize,
+} from './button.types.js';
 
 import { CraftzingElement, createStyles } from '@design-system/common';
 
 import buttonStyle from './button.css?inline';
 
 class CZButton extends CraftzingElement implements CZButtonProps {
-  static styles:CSSResultGroup = createStyles(buttonStyle);
+  static styles: CSSResultGroup = createStyles(buttonStyle);
 
   @property({ reflect: true })
-  appearance: CZButtonAppearance = "default";
+  appearance: CZButtonAppearance = 'default';
 
   @property({ type: String, reflect: true })
-  size: CZButtonSize = "large";
+  size: CZButtonSize = 'large';
 
   @property({ type: String, reflect: true })
   href = undefined;
@@ -31,7 +35,7 @@ class CZButton extends CraftzingElement implements CZButtonProps {
     return html`<${tag}
       ${spread(this.undeclaredAttributes)}
       class="${classNames([
-       'button',
+        'button',
         `button--appearance-${this.appearance}`,
         `button--size-${this.size}`,
       ])}"
