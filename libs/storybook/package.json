@@ -23,7 +23,7 @@
         ],
         "options": {
           "outputDir": "dist/storybook",
-          "configDir": "lib/storybook/.storybook"
+          "configDir": "libs/storybook/.storybook"
         },
         "configurations": {
           "ci": {

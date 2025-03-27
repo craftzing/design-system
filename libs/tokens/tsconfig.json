@@ -4,12 +4,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../libs/styles"
-    },
-    {
-      "path": "../common"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {

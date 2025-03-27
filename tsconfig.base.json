@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": ".",
     "composite": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
@@ -24,8 +25,13 @@
     "strict": true,
     "target": "es2022",
     "useDefineForClassFields": false,
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
+    "paths": {
+      "@design-system/common": ["packages/common/src/index.ts"],
+      "@design-system/styles": ["libs/styles/src/index.ts"],
+      "@design-system/tokens": ["libs/tokens/dist/*"]
+    },
   },
-  "include": [
-    "./env.d.ts",
-  ],
+  "include": ["./env.d.ts"]
 }
