@@ -24,7 +24,7 @@
       "build": {
         "executor": "nx:run-script",
         "outputs": [
-          "{projectRoot}/libs/tokens/dist"
+          "{projectRoot}/dist"
         ],
         "options": {
           "script": "build-tokens"
