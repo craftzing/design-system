@@ -98,13 +98,13 @@ nx run @design-system/tokens:build-tokens
 Run the tokens tests
 
 ```
-npm run test-tokens
+nx run @design-system/tokens:test
 ```
 
 Update the token snapshots
 
 ```
-npm run test-tokens:update
+nx run @design-system/tokens:test -u
 ```
 
 ## Chromatic

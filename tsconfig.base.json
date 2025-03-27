@@ -32,6 +32,6 @@
       "@design-system/styles": ["libs/styles/src/index.ts"],
       "@design-system/tokens": ["libs/tokens/dist/*"]
     },
-    "include": ["./env.d.ts"]
-  }
+  },
+  "include": ["./env.d.ts"]
 }

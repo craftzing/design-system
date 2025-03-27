@@ -6,6 +6,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "scripts": {
+    "build-tokens": "node ./lib/index.js --sourceFolder=tokens-studio --output=dist",
+    "test-tokens:update": "nx run @design-system/tokens:test -u"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -17,15 +21,19 @@
   "nx": {
     "sourceRoot": "libs/tokens",
     "targets": {
-      "build-tokens": {
-        "executor": "@design-system/build-tokens:build-tokens",
+      "build": {
+        "executor": "nx:run-script",
+        "outputs": [
+          "{projectRoot}/libs/tokens/dist"
+        ],
         "options": {
-          "source": "path-to-tokens.json",
-          "outputSets": "path-to-tokens/sets",
-          "outputTokens": "path-to-tokens/build"
+          "script": "build-tokens"
         }
       }
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "style-dictionary": "^4.3.3",
+    "vitest": "^1.3.1"
+  }
 }
