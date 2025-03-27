@@ -11,11 +11,11 @@ import {
 } from './button.types.js';
 
 import { CraftzingElement, createStyles } from '@design-system/common';
-
+import { hostStyles } from '@design-system/styles';
 import buttonStyle from './button.css?inline';
 
 class CZButton extends CraftzingElement implements CZButtonProps {
-  static styles: CSSResultGroup = createStyles(buttonStyle);
+  static styles: CSSResultGroup = [hostStyles, createStyles(buttonStyle)];
 
   @property({ reflect: true })
   appearance: CZButtonAppearance = 'default';

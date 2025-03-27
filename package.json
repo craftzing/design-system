@@ -5,14 +5,19 @@
   "scripts": {
     "storybook": "nx storybook storybook",
     "build-storybook": "nx build-storybook storybook",
-    "chromatic": "npx chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed"
+    "chromatic": "npx chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed",
+    "build-tokens": "node ./libs/tokens/lib/index.js --sourceFolder=libs/tokens/tokens-studio --output=libs/tokens/dist",
+    "test-tokens": "nx run @design-system/tokens:test",
+    "test-tokens:update": "nx run @design-system/tokens:test -u"
   },
   "private": true,
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "@nx/eslint": "20.4.2",
     "@nx/eslint-plugin": "20.4.2",
+    "@nx/jest": "20.4.2",
     "@nx/js": "20.4.2",
+    "@nx/plugin": "^20.4.2",
     "@nx/storybook": "^20.4.2",
     "@nx/vite": "20.4.2",
     "@nx/web": "20.4.2",
@@ -38,10 +43,12 @@
     "classnames": "^2.5.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.0.0",
+    "jsdom": "~22.1.0",
     "lit": "^3.2.1",
     "nx": "20.4.2",
     "prettier": "^2.6.2",
     "storybook": "^8.4.6",
+    "style-dictionary": "^4.3.3",
     "ts-lit-plugin": "^2.0.2",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
@@ -53,6 +60,10 @@
   },
   "workspaces": [
     "packages/*",
-    "libs/*"
-  ]
+    "libs/*",
+    "tools/*"
+  ],
+  "dependencies": {
+    "@nx/devkit": "20.4.2"
+  }
 }

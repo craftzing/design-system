@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "build-tokens": {
+      "implementation": "./dist/executors/build-tokens",
+      "schema": "./dist/executors/schema.json",
+      "description": "build-tokens executor"
+    }
+  }
+}

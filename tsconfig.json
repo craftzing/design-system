@@ -15,6 +15,11 @@
     {
       "path": "./libs/styles"
     },
+    {
+      "path": "./libs/tokens"
+    },
+    {
+      "path": "./tools/build-tokens"
     }
   ],
   "ts-node": {
