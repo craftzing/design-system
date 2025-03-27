@@ -34,7 +34,7 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       # Build tokens
-      - run: npx nx run @design-system/tokens:build
+      - run: npx nx run @design-system/tokens:build --no-cloud
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
