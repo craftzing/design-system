@@ -17,6 +17,9 @@
     },
     {
       "path": "./libs/tokens"
+    },
+    {
+      "path": "./packages/design-system"
     }
   ],
   "ts-node": {
