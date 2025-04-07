@@ -86,7 +86,19 @@
   },
   "release": {
     "version": {
-      "preVersionCommand": "npx nx run-many -t build"
+      "preVersionCommand": "npx nx run-many -t build",
+      "conventionalCommits": true
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "renderOptions": {
+          "authors": false,
+          "mapAuthorsToGitHubUsernames": false,
+          "commitReferences": false,
+          "versionTitleDate": false
+        }
+      }
     },
     "projects": ["@design-system/design-system"]
   }
