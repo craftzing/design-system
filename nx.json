@@ -91,7 +91,6 @@
     },
     "changelog": {
       "workspaceChangelog": {
-        "createRelease": "github",
         "renderOptions": {
           "authors": false,
           "mapAuthorsToGitHubUsernames": false,

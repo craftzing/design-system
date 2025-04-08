@@ -8,7 +8,8 @@
     "chromatic": "chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed",
     "build-tokens": "nx run @design-system/tokens:build",
     "test-tokens": "nx run @design-system/tokens:test",
-    "test-tokens:update": "nx run @design-system/tokens:test -u"
+    "test-tokens:update": "nx run @design-system/tokens:test -u",
+    "copy-changelog": "cp CHANGELOG.md dist/packages/design-system/CHANGELOG.md"
   },
   "private": true,
   "devDependencies": {

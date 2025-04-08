@@ -1,5 +1,5 @@
 {
-  "name": "craftzing-design-system-rollup",
+  "name": "craftzing-design-system-example",
   "version": "0.0.1",
   "main": "./index.cjs",
   "module": "./index.js",

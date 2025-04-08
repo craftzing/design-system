@@ -9,7 +9,7 @@ module.exports = withNx(
     format: ['esm'],
     assets: [{ input: '.', output: '.', glob: '*.md' }],
     additionalEntryPoints: ['./src/bar/bar.ts', './src/foo/foo.ts'],
-    generateExportsField: true
+    generateExportsField: true,
   },
   {
     // Provide additional rollup configuration here. See: https://rollupjs.org/configuration-options
