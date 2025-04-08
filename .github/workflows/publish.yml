@@ -35,7 +35,7 @@ jobs:
         shell: bash
 
       - name: Build and version packages
-        run: npx nx release --skip-publish --no-cloud --verbose
+        run: npx nx release --skip-publish --verbose
         shell: bash
 
       - name: Copy changelog
