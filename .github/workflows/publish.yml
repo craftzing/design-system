@@ -35,7 +35,7 @@ jobs:
         shell: bash
 
       - name: Build and version packages
-        run: npx nx release --skip-publish --no-cloud
+        run: npx nx release --skip-publish --verbose
         shell: bash
 
       - name: Copy changelog
@@ -43,7 +43,7 @@ jobs:
         shell: bash
 
       - name: Publish packages
-        run: npx nx release publish --no-cloud
+        run: npx nx release publish
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
