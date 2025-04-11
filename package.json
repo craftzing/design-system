@@ -9,11 +9,15 @@
     "build-tokens": "nx run @design-system/tokens:build",
     "test-tokens": "nx run @design-system/tokens:test",
     "test-tokens:update": "nx run @design-system/tokens:test -u",
-    "copy-changelog": "cp CHANGELOG.md dist/packages/design-system/CHANGELOG.md"
+    "copy-changelog": "cp CHANGELOG.md dist/packages/design-system/CHANGELOG.md",
+    "prepare": "husky"
   },
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-angular": "^18.0.0",
     "@eslint/js": "^9.8.0",
+    "@jscutlery/semver": "^5.6.0",
     "@nx/eslint": "20.4.2",
     "@nx/eslint-plugin": "20.4.2",
     "@nx/jest": "20.4.2",
@@ -47,6 +51,7 @@
     "classnames": "^2.5.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.0.0",
+    "husky": "^9.0.0",
     "jsdom": "~22.1.0",
     "lit": "^3.2.1",
     "nx": "20.4.2",
