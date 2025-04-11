@@ -1,0 +1,19 @@
+{
+  "name": "craftzing-design-system-test-core",
+  "version": "0.4.5",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "module": "./src/index.js",
+  "dependencies": {
+    "lit": "^3.2.1"
+  }
+}

@@ -4,6 +4,7 @@
 dist
 tmp
 out-tsc
+.swc
 
 # dependencies
 node_modules

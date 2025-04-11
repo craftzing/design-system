@@ -1,8 +1,10 @@
 {
-  "name": "craftzing-design-system-example",
-  "version": "0.0.1",
-  "main": "./index.cjs",
+  "name": "craftzing-design-system-test",
+  "version": "0.4.5",
+  "type": "module",
+  "main": "./index.js",
   "module": "./index.js",
+  "types": "./index.d.ts",
   "description": "Design system example setup.",
   "publishConfig": {
     "access": "public"
@@ -19,6 +21,18 @@
   "author": {
     "name": "Craftzing"
   },
-  "peerDependencies": {},
-  "dependencies": {}
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "lit": "^3.2.1",
+    "@open-wc/lit-helpers": "^0.7.0",
+    "classnames": "^2.5.1",
+    "craftzing-design-system-test-core": "0.4.5"
+  }
 }
