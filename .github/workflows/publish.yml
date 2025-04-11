@@ -45,7 +45,7 @@ jobs:
         run: npm run copy-changelog
         shell: bash
 
-      - name: Publish packagesz
+      - name: Publish packages
         run: npx nx release publish
         shell: bash
         env:
