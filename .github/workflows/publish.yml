@@ -34,19 +34,11 @@ jobs:
         run: npx nx report
         shell: bash
 
-      - name: Build and version packages
+      - name: Publish packages
         run: |
           git config --global user.email "bavo.vanderghote@craftzing.com"
           git config --global user.name "BavoVdg"
-          npx nx release --skip-publish
-        shell: bash
-
-      - name: Copy changelog
-        run: npm run copy-changelog
-        shell: bash
-
-      - name: Publish packages
-        run: npx nx release publish
+          npx nx release --yes
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
