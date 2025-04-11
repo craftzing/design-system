@@ -3,8 +3,8 @@ name: Publish
 
 on:
   push:
-    branches:
-      - release-test
+    tags:
+      - v*.*.*
 
 jobs:
   test:
