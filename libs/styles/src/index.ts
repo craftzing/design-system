@@ -1,1 +1,1 @@
-export * from './lib/host-styles/host-styles.ts';
+export * from './lib/host-styles/host-styles.js';

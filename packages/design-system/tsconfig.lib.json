@@ -1,11 +1,14 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/design-system",
+    "outDir": "dist",
+    "rootDir": "src",
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
     "declaration": true,
-    "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
   },
-  "include": ["src/**/*.ts"],
+  // Import env.d.ts on lib level since tsconfig.base.ts include is overridden.
+  "include": ["**/*.ts", "../../env.d.ts",],
   "exclude": [
     "vite.config.ts",
     "vite.config.mts",
@@ -19,5 +22,16 @@
     "src/**/*.spec.js",
     "src/**/*.test.jsx",
     "src/**/*.spec.jsx"
-  ]
+  ],
+  "references": [
+    {
+      "path": "../../libs/styles/tsconfig.lib.json"
+    },
+    {
+      "path": "../common/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/shared/tsconfig.lib.json"
+    },
+  ],
 }

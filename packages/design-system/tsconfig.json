@@ -4,16 +4,21 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "importHelpers": true,
-    "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noPropertyAccessFromIndexSignature": true,
-    "moduleResolution": "node",
-    "module": "ES2020"
   },
   "files": [],
-  "include": [],
   "references": [
+    {
+      "path": "../../libs/styles"
+    },
+    {
+      "path": "../../libs/shared"
+    },
+    {
+      "path": "../common"
+    },
     {
       "path": "./tsconfig.lib.json"
     },

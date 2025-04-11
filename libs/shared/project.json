@@ -1,7 +1,7 @@
 {
-  "name": "@design-system/styles",
+  "name": "@design-system/shared",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/styles/src",
+  "sourceRoot": "libs/shared/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,10 +9,10 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/styles",
-        "main": "libs/styles/src/index.ts",
-        "tsConfig": "libs/styles/tsconfig.lib.json",
-        "assets": ["libs/styles/*.md"]
+        "outputPath": "dist/libs/shared",
+        "main": "libs/shared/src/index.ts",
+        "tsConfig": "libs/shared/tsconfig.lib.json",
+        "assets": ["libs/shared/*.md"]
       }
     }
   }

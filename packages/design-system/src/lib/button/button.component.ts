@@ -10,7 +10,7 @@ import {
   CZButtonSize,
 } from './button.types.js';
 
-import { CraftzingElement, createStyles } from '@design-system/common';
+import { CraftzingElement, createStyles } from '@design-system/shared';
 import { hostStyles } from '@design-system/styles';
 import buttonStyle from './button.css?inline';
 

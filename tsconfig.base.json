@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
     "composite": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
+    "declaration": true,
     "experimentalDecorators": true,
+    "sourceMap": true,
     "importHelpers": true,
     "isolatedModules": true,
     "lib": ["es2022", "DOM", "DOM.Iterable"],
@@ -25,16 +25,7 @@
     "strict": true,
     "target": "es2022",
     "useDefineForClassFields": false,
-    "allowImportingTsExtensions": true,
-    "baseUrl": ".",
-    "paths": {
-      "@craftzing/design-system-example": [
-        "packages/design-system/src/index.ts"
-      ],
-      "@design-system/common": ["packages/common/src/index.ts"],
-      "@design-system/styles": ["libs/styles/src/index.ts"],
-      "@design-system/tokens": ["libs/tokens/dist/*"]
-    }
+    "baseUrl": "."
   },
-  "include": ["./env.d.ts"]
+  "include": ["src/**/*.ts", "./env.d.ts"]
 }

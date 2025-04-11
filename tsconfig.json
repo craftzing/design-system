@@ -20,6 +20,9 @@
     },
     {
       "path": "./packages/design-system"
+    },
+    {
+      "path": "./libs/shared"
     }
   ],
   "ts-node": {

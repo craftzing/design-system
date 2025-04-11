@@ -10,12 +10,13 @@
     "noPropertyAccessFromIndexSignature": true
   },
   "files": [],
+  "include": [],
   "references": [
     {
-      "path": "../../libs/shared",
+      "path": "./tsconfig.lib.json"
     },
     {
-      "path": "./tsconfig.lib.json",
-    },
+      "path": "./tsconfig.spec.json"
+    }
   ]
 }
