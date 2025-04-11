@@ -4,11 +4,13 @@
   "license": "MIT",
   "scripts": {
     "storybook": "nx storybook storybook",
-    "build-storybook": "nx build-storybook storybook",
+    "storybook:build": "nx build-storybook storybook",
     "chromatic": "chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed",
-    "build-tokens": "nx run @design-system/tokens:build",
-    "test-tokens": "nx run @design-system/tokens:test",
-    "test-tokens:update": "nx run @design-system/tokens:test -u",
+    "tokens:build": "nx run @design-system/tokens:build",
+    "tokens:test": "nx run @design-system/tokens:test",
+    "tokens:test:update": "nx run @design-system/tokens:test -u",
+    "version": "nx release --skip-publish",
+    "version:check": "nx release --skip-publish --dry-run",
     "copy-changelog": "cp CHANGELOG.md dist/packages/design-system/CHANGELOG.md"
   },
   "private": true,

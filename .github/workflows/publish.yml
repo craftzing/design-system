@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --global user.email "bavo.vanderghote@craftzing.com"
           git config --global user.name "BavoVdg"
-          npx nx release --yes
+          npx nx release publish
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}

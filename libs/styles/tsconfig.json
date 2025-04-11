@@ -12,10 +12,10 @@
   "files": [],
   "references": [
     {
-      "path": "../../libs/shared",
+      "path": "../shared"
     },
     {
-      "path": "./tsconfig.lib.json",
-    },
+      "path": "./tsconfig.lib.json"
+    }
   ]
 }

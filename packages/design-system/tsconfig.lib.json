@@ -5,10 +5,10 @@
     "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
     "declaration": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true
   },
   // Import env.d.ts on lib level since tsconfig.base.ts include is overridden.
-  "include": ["**/*.ts", "../../env.d.ts",],
+  "include": ["**/*.ts", "../../env.d.ts"],
   "exclude": [
     "vite.config.ts",
     "vite.config.mts",
@@ -25,13 +25,10 @@
   ],
   "references": [
     {
-      "path": "../../libs/styles/tsconfig.lib.json"
-    },
-    {
-      "path": "../common/tsconfig.lib.json"
-    },
-    {
       "path": "../../libs/shared/tsconfig.lib.json"
     },
-  ],
+    {
+      "path": "../../libs/styles/tsconfig.lib.json"
+    }
+  ]
 }

@@ -6,18 +6,15 @@
     "importHelpers": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": true
   },
   "files": [],
   "references": [
     {
-      "path": "../../libs/styles"
-    },
-    {
       "path": "../../libs/shared"
     },
     {
-      "path": "../common"
+      "path": "../../libs/styles"
     },
     {
       "path": "./tsconfig.lib.json"
