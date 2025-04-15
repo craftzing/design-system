@@ -25,8 +25,6 @@
     "lit": "^3.2.1",
     "@open-wc/lit-helpers": "^0.7.0",
     "classnames": "^2.5.1",
-    "tslib": "^2.3.0",
-    "@design-system/shared": "2.0.1",
-    "@design-system/styles": "2.0.1"
+    "tslib": "^2.3.0"
   }
 }
