@@ -10,7 +10,8 @@
     "test-tokens": "nx run @design-system/tokens:test",
     "test-tokens:update": "nx run @design-system/tokens:test -u",
     "copy-changelog": "cp CHANGELOG.md dist/packages/design-system/CHANGELOG.md",
-    "prepare": "husky"
+    "prepare": "husky",
+    "version": "nx run workspace:version --base=last-release --target=version --commitMessageFormat='ci(design system): release version {version}'"
   },
   "private": true,
   "devDependencies": {

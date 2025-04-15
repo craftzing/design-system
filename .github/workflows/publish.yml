@@ -41,8 +41,7 @@ jobs:
 
       - name: Version
         shell: bash
-        run: npx nx run workspace:version --base=last-release --target=version --commitMessageFormat= format('ci({projectName}){0} release version {version}', ':')
-
+        run: npm run version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
