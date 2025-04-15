@@ -2,7 +2,6 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
@@ -26,9 +25,6 @@
   "references": [
     {
       "path": "../../libs/styles/tsconfig.lib.json"
-    },
-    {
-      "path": "../common/tsconfig.lib.json"
     },
     {
       "path": "../../libs/shared/tsconfig.lib.json"

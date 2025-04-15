@@ -14,6 +14,19 @@
   "tags": [],
   "targets": {
     "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/design-system",
+        "entryFile": "packages/design-system/src/index.ts",
+        "tsConfig": "packages/design-system/tsconfig.lib.json",
+        "generateExportsField": true,
+        "additionalEntryPoints": [
+          "packages/design-system/src/lib/button/index.ts"
+        ]
+      }
+    },
+    "build-legacy": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
@@ -22,6 +35,7 @@
         "tsConfig": "packages/design-system/tsconfig.lib.json",
         "assets": ["packages/design-system/*.md"],
         "generateExportsField": true,
+        "external": ["lit", "@open-wc/lit-helpers", "classnames", "tslib"],
         "additionalEntryPoints": [
           "packages/design-system/src/lib/button/index.ts"
         ]
