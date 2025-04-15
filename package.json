@@ -70,11 +70,6 @@
     "vite-plugin-dts": "~3.8.1",
     "vitest": "^1.3.1"
   },
-  "workspaces": [
-    "packages/*",
-    "libs/*",
-    "tools/*"
-  ],
   "dependencies": {
     "@nx/devkit": "20.4.2"
   },

@@ -1,10 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "outDir": "../../dist/out-tsc",
     "declaration": true,
-    "forceConsistentCasingInFileNames": true,
   },
   // Import env.d.ts on lib level since tsconfig.base.ts include is overridden.
   "include": ["**/*.ts", "../../env.d.ts",],
@@ -22,12 +20,5 @@
     "src/**/*.test.jsx",
     "src/**/*.spec.jsx"
   ],
-  "references": [
-    {
-      "path": "../../libs/styles/tsconfig.lib.json"
-    },
-    {
-      "path": "../../libs/shared/tsconfig.lib.json"
-    },
-  ],
+  "references": [],
 }

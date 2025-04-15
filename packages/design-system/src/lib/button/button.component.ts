@@ -10,8 +10,8 @@ import {
   CZButtonSize,
 } from './button.types.js';
 
-import { CraftzingElement, createStyles } from '@design-system/shared';
-import { hostStyles } from '@design-system/styles';
+import { CraftzingElement, createStyles } from 'shared';
+import { hostStyles } from 'styles';
 import buttonStyle from './button.css?inline';
 
 class CZButton extends CraftzingElement implements CZButtonProps {

@@ -13,7 +13,7 @@
   },
   "tags": [],
   "targets": {
-    "build": {
+    "build-rollup": {
       "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
@@ -26,7 +26,7 @@
         ]
       }
     },
-    "build-legacy": {
+    "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {

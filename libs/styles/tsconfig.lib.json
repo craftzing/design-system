@@ -2,9 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": ".",
     "declaration": true,
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "exclude": [
     "vite.config.ts",

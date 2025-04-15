@@ -1,31 +1,22 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "declarationMap": true,
-    "declaration": true,
-    "experimentalDecorators": true,
+    "rootDir": ".",
     "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "importHelpers": true,
-    "isolatedModules": true,
-    "lib": ["es2022", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": false,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "plugins": [
-      {
-        "name": "ts-lit-plugin",
-        "strict": true
-      }
-    ],
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
-    "strict": true,
-    "target": "es2022",
-    "useDefineForClassFields": false,
+    "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "paths": {
+      "shared": ["libs/shared/src/index.ts"],
+      "styles": ["libs/styles/src/index.ts"],
+    }
   },
-  "include": ["src/**/*.ts", "./env.d.ts"]
+  "include": ["src/**/*.ts", "./env.d.ts"],
 }

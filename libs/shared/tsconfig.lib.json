@@ -1,10 +1,9 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "baseUrl": ".",
+    "outDir": "../../dist/out-tsc",
     "declaration": true,
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
+    "types": ["node"]
   },
   "include": ["src/**/*.ts"],
   "exclude": [

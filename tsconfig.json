@@ -2,32 +2,6 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": [
-    {
-      "path": "./packages/button"
-    },
-    {
-      "path": "./packages/common"
-    },
-    {
-      "path": "./libs/storybook"
-    },
-    {
-      "path": "./libs/styles"
-    },
-    {
-      "path": "./libs/tokens"
-    },
-    {
-      "path": "./packages/design-system"
-    },
-    {
-      "path": "./libs/shared"
-    }
-  ],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  }
+  "references": [], 
+  "exclude": ["node_modules"]
 }
