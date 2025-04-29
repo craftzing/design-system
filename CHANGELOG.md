@@ -2,6 +2,23 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.1](https://github.com/craftzing/design-system/compare/v2.1.0...v2.1.1) (2025-04-29)
+
+
+### Reverts
+
+* revert to npm workspace and project references ([aaa39f6](https://github.com/craftzing/design-system/commit/aaa39f6e3d92271dcb4cdbb7db077366aa974441))
+
+
+
+## 2.1.1 (2025-04-29)
+
+This was a version bump only, there were no code changes.
+
+# Changelog
+
+This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
+
 # [2.1.0](https://github.com/craftzing/design-system/compare/v2.0.0...v2.1.0) (2025-04-15)
 
 
