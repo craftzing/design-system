@@ -1,29 +1,14 @@
 {
+  "$schema": "https://swc.rs/schema.json",
+  "exclude": [".test.ts", ".types.ts", ".stories.ts"],
   "jsc": {
-    "target": "es2017",
-    "parser": {
-      "syntax": "typescript",
-      "decorators": true,
-      "dynamicImport": true
-    },
-    "transform": {
-      "decoratorMetadata": true,
-      "legacyDecorator": true
-    },
-    "keepClassNames": true,
-    "externalHelpers": true,
-    "loose": true
-  },
-  "module": {
-    "type": "es6"
-  },
-  "sourceMaps": true,
-  "exclude": [
-    "jest.config.ts",
-    ".*\\.spec.tsx?$",
-    ".*\\.test.tsx?$",
-    "./src/jest-setup.ts$",
-    "./**/jest-setup.ts$",
-    ".*.js$"
-  ]
+      "parser": {
+          "syntax": "typescript",
+          "decorators": true
+      },
+      "target": "esnext",
+      "transform": {
+          "useDefineForClassFields": false
+      }
+  }
 }

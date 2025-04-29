@@ -26,7 +26,7 @@ class CZButton extends CraftzingElement implements CZButtonProps {
   size: CZButtonSize = 'large';
 
   @property({ type: String, reflect: true })
-  href = undefined;
+  href: string = undefined;
 
   @property({ type: Boolean, reflect: true })
   disabled = false;

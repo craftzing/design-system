@@ -8,7 +8,7 @@
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   // Import env.d.ts on lib level since tsconfig.base.ts include is overridden.
-  "include": ["**/*.ts", "../../env.d.ts",],
+  "include": ["**/*.ts", "../../env.d.ts"],
   "exclude": [
     "vite.config.ts",
     "vite.config.mts",
@@ -23,5 +23,9 @@
     "src/**/*.test.jsx",
     "src/**/*.spec.jsx"
   ],
-  "references": [],
+  "references": [
+    {
+      "path": "../core/tsconfig.lib.json"
+    }
+  ]
 }

@@ -1,6 +1,7 @@
 {
-  "name": "design-system",
+  "name": "craftzing-design-system-example",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/design-system/src",
   "projectType": "library",
   "release": {
     "version": {
@@ -12,19 +13,6 @@
   },
   "tags": [],
   "targets": {
-    "build-rollup": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/packages/design-system",
-        "entryFile": "packages/design-system/src/index.ts",
-        "tsConfig": "packages/design-system/tsconfig.lib.json",
-        "generateExportsField": true,
-        "additionalEntryPoints": [
-          "packages/design-system/src/lib/button/index.ts"
-        ]
-      }
-    },
     "build": {
       "executor": "@nx/js:swc",
       "options": {
