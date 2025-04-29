@@ -1,6 +1,6 @@
 {
   "name": "craftzing-design-system-example-core",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "type": "module",
   "exports": {
     ".": {
@@ -14,7 +14,6 @@
   "types": "./src/index.d.ts",
   "module": "./src/index.js",
   "dependencies": {
-    "lit": "^3.2.1",
-    "tslib": "^2.3.0"
+    "lit": "^3.2.1"
   }
 }
