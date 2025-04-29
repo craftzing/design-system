@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.1.0](https://github.com/craftzing/design-system/compare/craftzing-design-system-example-core-0.0.1...craftzing-design-system-example-core-0.1.0) (2025-04-29)
+
+
+### Features
+
+* **core:** dummy feature ([9e74b4a](https://github.com/craftzing/design-system/commit/9e74b4af5c6005d3d03d72af0bc968878f2f0931))
+
+
+
 ## 0.0.1 (2025-04-29)
 
 
