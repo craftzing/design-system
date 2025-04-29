@@ -11,6 +11,11 @@
       "options": {
         "script": "tokens:build"
       }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
     }
   }
 }
