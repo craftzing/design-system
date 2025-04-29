@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.2](https://github.com/craftzing/design-system/compare/v2.1.1...v2.1.2) (2025-04-29)
+
+
+### Bug Fixes
+
+* update packag.json ([c29825d](https://github.com/craftzing/design-system/commit/c29825d0f68107b61dd27b8ea782d2bd390a1187))
+
+
+
 ## [2.1.1](https://github.com/craftzing/design-system/compare/v2.1.0...v2.1.1) (2025-04-29)
 
 
