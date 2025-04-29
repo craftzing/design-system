@@ -42,6 +42,20 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 * revert to npm workspace and project references ([aaa39f6](https://github.com/craftzing/design-system/commit/aaa39f6e3d92271dcb4cdbb7db077366aa974441))
 
+
+
+## 0.0.1 (2025-04-29)
+
+
+### Bug Fixes
+
+* update packag.json ([c29825d](https://github.com/craftzing/design-system/commit/c29825d0f68107b61dd27b8ea782d2bd390a1187))
+
+
+### Reverts
+
+* revert to npm workspace and project references ([aaa39f6](https://github.com/craftzing/design-system/commit/aaa39f6e3d92271dcb4cdbb7db077366aa974441))
+
 ## [2.1.2](https://github.com/craftzing/design-system/compare/v2.1.1...v2.1.2) (2025-04-29)
 
 
