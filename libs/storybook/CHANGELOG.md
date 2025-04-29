@@ -6,6 +6,10 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 
 
+## [2.1.2](https://github.com/craftzing/design-system/compare/v2.1.1...v2.1.2) (2025-04-29)
+
+
+
 ## [2.1.1](https://github.com/craftzing/design-system/compare/v2.1.0...v2.1.1) (2025-04-29)
 
 
