@@ -1,3 +1,13 @@
+## 0.5.0 (2025-04-29)
+
+### 🚀 Features
+
+- **button:** Add button component to design system. ([38758fe](https://github.com/craftzing/design-system/commit/38758fe))
+
+### ❤️ Thank You
+
+- Bavo Vanderghote
+
 ## 0.4.5 (2025-04-29)
 
 This was a version bump only, there were no code changes.
