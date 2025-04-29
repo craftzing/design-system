@@ -10,12 +10,14 @@ import {
   CZButtonSize,
 } from './button.types.js';
 
-import { CraftzingElement, createStyles } from 'shared';
-import { hostStyles } from 'styles';
+import {
+  CraftzingElement,
+  createStyles,
+} from 'craftzing-design-system-example-core';
 import buttonStyle from './button.css?inline';
 
 class CZButton extends CraftzingElement implements CZButtonProps {
-  static styles: CSSResultGroup = [hostStyles, createStyles(buttonStyle)];
+  static styles: CSSResultGroup = createStyles(buttonStyle);
 
   @property({ reflect: true })
   appearance: CZButtonAppearance = 'default';

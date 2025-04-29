@@ -1,22 +1,19 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
-    "module": "esnext",
+    "module": "nodenext",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "shared": ["libs/shared/src/index.ts"],
-      "styles": ["libs/styles/src/index.ts"],
-    }
   },
   "include": ["src/**/*.ts", "./env.d.ts"],
 }

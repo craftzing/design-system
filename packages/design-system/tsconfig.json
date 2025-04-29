@@ -5,7 +5,7 @@
   "include": [],
   "references": [
     {
-      "path": "../../libs/shared",
+      "path": "../../packages/core",
     },
     {
       "path": "./tsconfig.lib.json",

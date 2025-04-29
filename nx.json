@@ -84,6 +84,6 @@
     }
   },
   "release": {
-    "projects": ["@design-system/design-system"]
+    "projects": ["packages/*"]
   }
 }
