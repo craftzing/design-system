@@ -1,4 +1,6 @@
-import { LitElement } from "lit";
+import { LitElement } from 'lit';
+
+// Dummy feature
 
 export class CraftzingElement extends LitElement {
   constructor() {
@@ -43,7 +45,7 @@ export class CraftzingElement extends LitElement {
     return Array.from(this.attributes)
       .filter(
         (attr) =>
-          attr.name !== "class" &&
+          attr.name !== 'class' &&
           !(this.constructor as typeof CraftzingElement).elementProperties.has(
             attr.name
           )
