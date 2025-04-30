@@ -14,7 +14,7 @@
         "assets": ["packages/design-system/*.md"],
         "generateExportsField": true,
         "additionalEntryPoints": [
-          "packages/design-system/src/lib/button/index.ts"
+          "packages/design-system/src/lib/button/button.component.ts"
         ],
         "swcrc": "packages/design-system/.swcrc"
       }
