@@ -1,3 +1,13 @@
+## 0.5.3 (2025-04-30)
+
+### 🩹 Fixes
+
+- update type export syntax for correct handling by swc ([334b715](https://github.com/craftzing/design-system/commit/334b715))
+
+### ❤️ Thank You
+
+- Bavo Vanderghote
+
 ## 0.5.2 (2025-04-30)
 
 ### 🩹 Fixes
