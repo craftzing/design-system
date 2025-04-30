@@ -1,11 +1,11 @@
-import { describe, it, expect } from "vitest";
-import { fixture, html } from "@open-wc/testing-helpers";
-import { CraftzingElement } from "./craftzing-element.js";
+import { describe, it, expect } from 'vitest';
+import { fixture, html } from '@open-wc/testing-helpers';
+import { CraftzingElement } from './craftzing-element.ts';
 
-describe("CraftzingElement", () => {
+describe('CraftzingElement', () => {
   class TestElement extends CraftzingElement {
     static properties = {
-      reserved: { type: String, attribute: "reserved" },
+      reserved: { type: String, attribute: 'reserved' },
     };
 
     getUndeclaredAttributesForTest() {
@@ -17,28 +17,28 @@ describe("CraftzingElement", () => {
 
   class ElementWithDependencies extends CraftzingElement {
     static dependencies = {
-      "test-dependency": DependencyElement,
+      'test-dependency': DependencyElement,
     };
   }
 
-  it("should handle undeclared attributes", async () => {
-    TestElement.define("test-element", TestElement);
+  it('should handle undeclared attributes', async () => {
+    TestElement.define('test-element', TestElement);
     const el = (await fixture(
       html`<test-element undeclared="value" reserved="value"></test-element>`
     )) as TestElement;
 
     expect(el.getUndeclaredAttributesForTest()).toEqual({
-      undeclared: "value",
+      undeclared: 'value',
     });
   });
 
-  it("should register dependencies on construction", () => {
+  it('should register dependencies on construction', () => {
     ElementWithDependencies.define(
-      "element-with-deps",
+      'element-with-deps',
       ElementWithDependencies
     );
     new ElementWithDependencies();
 
-    expect(customElements.get("test-dependency")).toBeDefined();
+    expect(customElements.get('test-dependency')).toBeDefined();
   });
 });

@@ -1,2 +1,2 @@
-export * from './button.component.js';
-export * from './button.types.js';
+export * from './button.component.ts';
+export * from './button.types.ts';

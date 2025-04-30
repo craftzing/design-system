@@ -9,6 +9,16 @@
       "target": "esnext",
       "transform": {
           "useDefineForClassFields": false
-      }
+      },
+      "experimental": {
+            "plugins": [[
+                "@swc/plugin-transform-imports", {
+                    "^(.*?)(\\.ts)$": {
+                        "skipDefaultConversion": true,
+                        "transform": "{{matches.[1]}}.js"
+                    }
+                }
+            ]]
+        }
   }
 }
