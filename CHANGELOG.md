@@ -1,3 +1,14 @@
+## 0.5.1 (2025-04-30)
+
+### 🩹 Fixes
+
+- storybook css import ([9383d5a](https://github.com/craftzing/design-system/commit/9383d5a))
+- add import transforms to swc build config to allow importing ts extensions ([5c99c0f](https://github.com/craftzing/design-system/commit/5c99c0f))
+
+### ❤️ Thank You
+
+- Bavo Vanderghote
+
 ## 0.5.0 (2025-04-29)
 
 ### 🚀 Features

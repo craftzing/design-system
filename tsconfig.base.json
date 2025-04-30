@@ -34,7 +34,7 @@
     ],
     "paths": {
       "craftzing-design-system-test-tokens": ["libs/tokens/dist/*"]
-    },
+    }
   },
-  "include": ["src/**/*.ts", "./env.d.ts"],
+  "include": ["src/**/*.ts", "./env.d.ts"]
 }
