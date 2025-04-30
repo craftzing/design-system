@@ -31,7 +31,10 @@
         "name": "ts-lit-plugin",
         "strict": true
       }
-    ]
+    ],
+    "paths": {
+      "craftzing-design-system-test-tokens": ["libs/tokens/dist/*"]
+    },
   },
   "include": ["src/**/*.ts", "./env.d.ts"],
 }
