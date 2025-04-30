@@ -1,6 +1,6 @@
 {
   "name": "craftzing-design-system-test",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "type": "module",
   "main": "./index.js",
   "module": "./index.js",
@@ -33,6 +33,6 @@
     "lit": "^3.2.1",
     "@open-wc/lit-helpers": "^0.7.0",
     "classnames": "^2.5.1",
-    "craftzing-design-system-test-core": "0.5.3"
+    "craftzing-design-system-test-core": "0.6.0"
   }
 }

@@ -1,3 +1,13 @@
+## 0.6.0 (2025-04-30)
+
+### 🚀 Features
+
+- add auto define import and sub entry point to get undefined comopnent ([c9773a2](https://github.com/craftzing/design-system/commit/c9773a2))
+
+### ❤️ Thank You
+
+- Bavo Vanderghote
+
 ## 0.5.3 (2025-04-30)
 
 ### 🩹 Fixes
