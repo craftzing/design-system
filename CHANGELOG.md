@@ -1,3 +1,13 @@
+## 0.5.2 (2025-04-30)
+
+### 🩹 Fixes
+
+- fix types references in built package ([fe97ab9](https://github.com/craftzing/design-system/commit/fe97ab9))
+
+### ❤️ Thank You
+
+- Bavo Vanderghote
+
 ## 0.5.1 (2025-04-30)
 
 ### 🩹 Fixes
