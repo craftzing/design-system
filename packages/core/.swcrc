@@ -16,6 +16,10 @@
                     "^(.*?)(\\.ts)$": {
                         "skipDefaultConversion": true,
                         "transform": "{{matches.[1]}}.js"
+                    },
+                    "^(.*?)(\\.types\\.ts)$": {
+                        "skipDefaultConversion": true,
+                        "transform": "{{matches.[1]}}.types.d.ts"
                     }
                 }
             ]]
