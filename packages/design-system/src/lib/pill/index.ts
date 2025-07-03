@@ -1,3 +1,2 @@
 export * from './pill.component.ts';
-export * from './pill.types.ts';
-export * from './pill.ts';
+export type { CZPillProps, CZPillVariant, CZPillSize } from './pill.types.ts';

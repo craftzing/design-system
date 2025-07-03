@@ -1,7 +1,11 @@
 import { CZLabel } from './label.component.ts';
 
-if (!customElements.get('cz-label')) {
-  customElements.define('cz-label', CZLabel);
-}
-
 export { CZLabel };
+
+CZLabel.define('cz-label');
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'cz-label': CZLabel;
+  }
+}
