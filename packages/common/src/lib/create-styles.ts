@@ -10,21 +10,15 @@ const hasConstructableStylesheetsSupport = () =>
 
 export const createStyles = (cssText: string) => {
   if (!hasConstructableStylesheetsSupport()) {
-    return css`
-      ${unsafeCSS(cssText)}
-    `;
+    return css`${unsafeCSS(cssText)}`;
   }
 
   try {
     const sheet = new CSSStyleSheet();
     sheet.replaceSync(cssText);
-    return css`
-      ${unsafeCSS(cssText)}
-    `;
+    return sheet;
   } catch (error) {
     warn("Failed to create CSSStyleSheet:", error);
-    return css`
-      ${unsafeCSS(cssText)}
-    `;
+    return css`${unsafeCSS(cssText)}`;
   }
 };
