@@ -49,6 +49,52 @@ design-system/
 - **Props**: TypeScript interfaces with Lit decorators
 - **Exports**: ESM with proper TypeScript declarations
 
+## Our Stack for Component Development
+
+When using the Figma MCP server or generating components from designs, use the following technology stack:
+
+### Primary Technologies
+
+- **Framework**: Lit (Web Components)
+- **Language**: TypeScript
+- **Styling**: CSS-in-JS with Lit's `css` template literal
+- **Design Tokens**: CSS custom properties from `/packages/tokens/dist/css/tokens.css`
+
+### Component Implementation Stack
+
+- **Base Class**: Always extend `CraftzingElement` (imported from `craftzing-design-system-test-core`)
+- **Property Decorators**: Use Lit's `@property()` decorator for reactive properties
+- **Templates**: Use Lit's `html` template literal for rendering
+- **Event Handling**: Use Lit's event binding syntax (`@event="${handler}"`)
+- **Conditional Rendering**: Use Lit directives (`ifDefined`, `classMap`, etc.)
+
+### Styling Guidelines
+
+- **CSS Variables**: Always use design tokens from tokens.css (e.g., `var(--primary-500)`, `var(--space-m)`)
+- **CSS Nesting**: Use native CSS nesting for component styles
+- **BEM-like Classes**: Use component-specific class naming (e.g., `.button`, `.button--primary`)
+- **Responsive Design**: Use token-based breakpoints and spacing
+- **Accessibility**: Include proper ARIA attributes and focus states
+
+### Utility Libraries
+
+- **Class Management**: `classnames` for conditional CSS classes
+- **Spread Attributes**: `@open-wc/lit-helpers` for spreading undeclared attributes
+- **Conditional Values**: `lit/directives/if-defined` for optional attributes
+
+### Code Generation Context
+
+When generating code from Figma designs:
+
+- Use semantic HTML elements where appropriate
+- Implement proper TypeScript interfaces for component props
+- Include comprehensive accessibility attributes
+- Use design tokens for all visual properties (colors, spacing, typography)
+- Follow the existing component patterns and file structure
+- Build components highly composable
+- Always use slots when the slot component is used in Figma
+- Include proper exports and component registration
+
 ## Key Files and Entry Points
 
 ### Main Entry Points
@@ -219,11 +265,11 @@ When creating stories for a component built with Lit, **always define the compon
 ```typescript
 import { CZButton } from './button.component.js';
 
-CZButton.define('cz-button');  // Define component at the top
+CZButton.define('cz-button'); // Define component at the top
 
 export default {
-  title: "Components/Button",
-  component: "cz-button",
+  title: 'Components/Button',
+  component: 'cz-button',
   // ... rest of config
 };
 ```
