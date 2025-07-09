@@ -1,3 +1,21 @@
+## 0.7.2 (2025-07-03)
+
+This was a version bump only, there were no code changes.
+
+## 0.7.1 (2025-07-03)
+
+This was a version bump only, there were no code changes.
+
+## 0.7.0 (2025-07-03)
+
+### 🚀 Features
+
+- add pill, label, and text-input components ([6a25a69](https://github.com/craftzing/design-system/commit/6a25a69))
+
+### ❤️ Thank You
+
+- Bavo Vanderghote
+
 ## 0.6.0 (2025-04-30)
 
 ### 🚀 Features

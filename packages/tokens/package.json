@@ -1,6 +1,6 @@
 {
   "name": "craftzing-design-system-test-tokens",
-  "version": "0.6.0",
+  "version": "0.7.2",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",

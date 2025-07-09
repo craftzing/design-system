@@ -14,7 +14,10 @@
         "assets": ["packages/design-system/*.md"],
         "generateExportsField": true,
         "additionalEntryPoints": [
-          "packages/design-system/src/lib/button/button.component.ts"
+          "packages/design-system/src/lib/button/button.ts",
+          "packages/design-system/src/lib/label/label.ts",
+          "packages/design-system/src/lib/pill/pill.ts",
+          "packages/design-system/src/lib/text-input/text-input.ts"
         ],
         "swcrc": "packages/design-system/.swcrc"
       }

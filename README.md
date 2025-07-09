@@ -1,3 +1,5 @@
+⚠️ This repo is a work in progress and should not be used as a template for new design systems (yet).
+
 # DesignSystem
 
 This repository contains an example setup for a web components-based design system.
