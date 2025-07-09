@@ -15,16 +15,16 @@ class CZLabel extends CraftzingElement implements CZLabelProps {
       align-items: center;
       justify-content: flex-start;
       
-      padding: 2px 0;
+      padding: var(--space-xxxs) 0;
       
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 1.4;
+      font-family: sans-serif;
+      font-weight: var(--semibold);
+      font-size: var(--size-m);
+      line-height: var(--line-height-140);
       text-align: left;
       white-space: nowrap;
       
-      color: #4b4855;
+      color: var(--neutral-700);
       
       &:where([disabled], [aria-disabled='true']) {
         opacity: 0.5;

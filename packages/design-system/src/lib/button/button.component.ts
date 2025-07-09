@@ -23,14 +23,14 @@ class CZButton extends CraftzingElement implements CZButtonProps {
       align-items: center;
       justify-content: center;
 
-      line-height: 1.2;
-      font-weight: 700;
+      line-height: var(--line-height-140);
+      font-weight: var(--bold);
 
       cursor: pointer;
       text-decoration: none;
 
       transition: all 0.2s ease-in-out 0s;
-      border: 0.125rem solid transparent;
+      border: var(--space-xxxs) solid transparent;
 
       &:active {
         transform: scale(0.95);

@@ -18,76 +18,76 @@ class CZTextInput extends CraftzingElement implements CZTextInputProps {
       position: relative;
       display: inline-block;
       width: 100%;
-      border-radius: 4px;
+      border-radius: var(--space-xxxs);
     }
 
     .text-input__field {
       box-sizing: border-box;
       width: 100%;
-      padding: 4px 8px;
+      padding: var(--space-xxxs) var(--space-xxs);
       
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.4;
+      font-family: sans-serif;
+      font-weight: var(--regular);
+      font-size: var(--size-m);
+      line-height: var(--line-height-140);
       
-      color: #161320;
+      color: var(--typography-black);
       background-color: transparent;
-      border: 1px solid #706d78;
-      border-radius: 4px;
+      border: 1px solid var(--neutral-600);
+      border-radius: var(--space-xxxs);
       
       outline: none;
       transition: all 0.2s ease-in-out;
       
       &::placeholder {
-        color: #a7a6ac;
+        color: var(--neutral-500);
       }
       
       &:hover {
-        border-color: #6b52d0;
+        border-color: var(--primary-600);
       }
       
       &:focus {
-        border-color: #6b52d0;
+        border-color: var(--primary-600);
         outline: none;
       }
       
       &:focus-visible {
-        border-color: #6b52d0;
-        outline: 3px solid #706d78;
+        border-color: var(--primary-600);
+        outline: 3px solid var(--neutral-600);
         outline-offset: 1px;
       }
       
       &:where([disabled]) {
         cursor: not-allowed;
         opacity: 0.5;
-        background-color: #f5f5f5;
+        background-color: var(--neutral-100);
       }
       
       &:where([readonly]) {
         cursor: default;
         background-color: transparent;
         border: none;
-        border-left: 1px solid #6b52d0;
+        border-left: 1px solid var(--primary-600);
         border-radius: 0;
         
         &:focus,
         &:focus-visible {
           border: none;
-          border-left: 1px solid #6b52d0;
+          border-left: 1px solid var(--primary-600);
           outline: none;
         }
       }
     }
 
     .text-input--state-error .text-input__field {
-      border-color: #da2828;
-      background-color: #fef2f2;
+      border-color: var(--error-600);
+      background-color: var(--error-50);
       
       &:hover,
       &:focus {
-        border-color: #da2828;
-        box-shadow: 0 0 0 1px #da2828;
+        border-color: var(--error-600);
+        box-shadow: 0 0 0 1px var(--error-600);
       }
     }
   `;

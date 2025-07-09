@@ -19,13 +19,13 @@ class CZPill extends CraftzingElement implements CZPillProps {
       align-items: center;
       justify-content: center;
       
-      border-radius: 15px;
-      padding: 4px 8px;
+      border-radius: var(--space-s);
+      padding: var(--space-xxxs) var(--space-xxs);
       
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 1.4;
+      font-family: sans-serif;
+      font-weight: var(--semibold);
+      font-size: var(--size-m);
+      line-height: var(--line-height-140);
       text-align: center;
       white-space: nowrap;
       
@@ -39,33 +39,33 @@ class CZPill extends CraftzingElement implements CZPillProps {
     }
 
     .pill--variant-default {
-      background-color: #6b52d0;
-      color: #ffffff;
+      background-color: var(--primary-600);
+      color: var(--typography-white);
       
       &:where([disabled], [aria-disabled='true']) {
-        background-color: #ececed;
-        color: #ffffff;
+        background-color: var(--neutral-200);
+        color: var(--typography-white);
       }
     }
 
     .pill--variant-error {
-      background-color: #da2828;
-      color: #ffffff;
+      background-color: var(--error-600);
+      color: var(--typography-white);
       
       &:where([disabled], [aria-disabled='true']) {
-        background-color: #ececed;
-        color: #ffffff;
+        background-color: var(--neutral-200);
+        color: var(--typography-white);
       }
     }
 
     .pill--size-large {
-      padding: 4px 8px;
-      font-size: 16px;
+      padding: var(--space-xxxs) var(--space-xxs);
+      font-size: var(--size-m);
     }
 
     .pill--size-medium {
-      padding: 4px 8px;
-      font-size: 14px;
+      padding: var(--space-xxxs) var(--space-xxs);
+      font-size: var(--size-s);
     }
   `;
 
