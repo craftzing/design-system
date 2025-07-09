@@ -6,7 +6,7 @@
     "clean": "rm -rf dist",
     "storybook": "nx storybook storybook",
     "storybook:build": "nx build-storybook storybook",
-    "chromatic": "chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed",
+    "chromatic": "chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed --build-script-name=storybook:build",
     "tokens:build": "nx run tokens:build",
     "tokens:test": "nx run tokens:test",
     "tokens:test:update": "nx run tokens:test -u",
