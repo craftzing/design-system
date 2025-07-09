@@ -1,0 +1,28 @@
+{
+  "name": "design-system",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/design-system/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "options": {
+        "outputPath": "dist/packages/design-system",
+        "main": "packages/design-system/src/index.ts",
+        "tsConfig": "packages/design-system/tsconfig.lib.json",
+        "assets": ["packages/design-system/*.md"],
+        "generateExportsField": true,
+        "additionalEntryPoints": [
+          "packages/design-system/src/lib/button/button.component.ts"
+        ],
+        "swcrc": "packages/design-system/.swcrc"
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

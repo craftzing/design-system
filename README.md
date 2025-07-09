@@ -74,7 +74,7 @@ libs/tokens/tokens-studio/tokens.json
 Run the following command to build the design tokens. This will generate the platform specific styles and store them in the dist folder.
 
 ```
-npm run build-tokens
+npm run tokens:build
 ```
 
 The design tokens are now available through the workspace.
@@ -87,10 +87,10 @@ import cssTokens from @design-system/tokens/css/tokens.css
 
 ESM support issue: https://github.com/nrwl/nx/issues/15682
 
-An example executor for building the tokens can be found in the `tools/build-tokens` directory. With a custom executor, building the tokens might look like this:
+An example executor for building the tokens can be found in the `tools/tokens:build` directory. With a custom executor, building the tokens might look like this:
 
 ```
-nx run @design-system/tokens:build-tokens
+nx run @design-system/tokens:tokens:build
 ```
 
 ### Testing your tokens

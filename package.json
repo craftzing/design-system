@@ -3,27 +3,34 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf dist",
     "storybook": "nx storybook storybook",
-    "build-storybook": "nx build-storybook storybook",
+    "storybook:build": "nx build-storybook storybook",
     "chromatic": "chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2) -o=dist/storybook --only-changed",
-    "build-tokens": "nx run @design-system/tokens:build",
-    "test-tokens": "nx run @design-system/tokens:test",
-    "test-tokens:update": "nx run @design-system/tokens:test -u"
+    "tokens:build": "nx run tokens:build",
+    "tokens:test": "nx run tokens:test",
+    "tokens:test:update": "nx run tokens:test -u",
+    "version": "nx run workspace:version --base=last-release --target=version --commitMessageFormat='ci(design system): release version {version}'"
   },
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-angular": "^18.0.0",
     "@eslint/js": "^9.8.0",
+    "@jscutlery/semver": "^5.6.0",
     "@nx/eslint": "20.4.2",
     "@nx/eslint-plugin": "20.4.2",
     "@nx/jest": "20.4.2",
     "@nx/js": "20.4.2",
     "@nx/plugin": "^20.4.2",
+    "@nx/rollup": "20.4.2",
     "@nx/storybook": "^20.4.2",
     "@nx/vite": "20.4.2",
     "@nx/web": "20.4.2",
     "@open-wc/lit-helpers": "^0.7.0",
     "@open-wc/testing": "^4.0.0",
     "@open-wc/testing-helpers": "^3.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@storybook/addon-essentials": "^8.4.6",
     "@storybook/addon-interactions": "^8.4.6",
     "@storybook/core-server": "^8.4.6",
@@ -33,9 +40,10 @@
     "@storybook/web-components": "^8.5.3",
     "@storybook/web-components-vite": "^8.4.6",
     "@swc-node/register": "~1.9.1",
-    "@swc/cli": "~0.3.12",
-    "@swc/core": "~1.5.7",
+    "@swc/cli": "^0.7.3",
+    "@swc/core": "^1.11.24",
     "@swc/helpers": "~0.5.11",
+    "@swc/plugin-transform-imports": "^7.0.3",
     "@types/node": "18.16.9",
     "@vitest/coverage-v8": "^1.0.4",
     "@vitest/ui": "^1.3.1",
@@ -47,23 +55,28 @@
     "lit": "^3.2.1",
     "nx": "20.4.2",
     "prettier": "^2.6.2",
+    "rollup": "^4.14.0",
     "storybook": "^8.4.6",
     "style-dictionary": "^4.3.3",
+    "swc-loader": "0.1.15",
     "ts-lit-plugin": "^2.0.2",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.19.0",
+    "verdaccio": "^5.0.4",
     "vite": "^5.0.0",
     "vite-plugin-dts": "~3.8.1",
     "vitest": "^1.3.1"
   },
-  "workspaces": [
-    "packages/*",
-    "libs/*",
-    "tools/*"
-  ],
   "dependencies": {
     "@nx/devkit": "20.4.2"
-  }
+  },
+  "nx": {
+    "includedScripts": []
+  },
+  "workspaces": [
+    "libs/*",
+    "packages/*"
+  ]
 }

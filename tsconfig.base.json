@@ -1,37 +1,40 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
     "composite": true,
+    "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
+    "sourceMap": true,
+    "moduleResolution": "bundler",
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "isolatedModules": true,
-    "lib": ["es2022", "DOM", "DOM.Iterable"],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": false,
-    "noImplicitReturns": true,
+    "target": "ES2015",
+    "module": "ESNext",
+    "lib": ["ES2015", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "inlineSources": true,
     "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": false,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
     "plugins": [
       {
         "name": "ts-lit-plugin",
         "strict": true
       }
     ],
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "es2022",
-    "useDefineForClassFields": false,
-    "allowImportingTsExtensions": true,
-    "baseUrl": ".",
     "paths": {
-      "@design-system/common": ["packages/common/src/index.ts"],
-      "@design-system/styles": ["libs/styles/src/index.ts"],
-      "@design-system/tokens": ["libs/tokens/dist/*"]
-    },
+      "craftzing-design-system-test-tokens": ["libs/tokens/dist/*"]
+    }
   },
-  "include": ["./env.d.ts"]
+  "include": ["src/**/*.ts", "./env.d.ts"]
 }

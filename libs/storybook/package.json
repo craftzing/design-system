@@ -1,6 +1,6 @@
 {
   "name": "@design-system/storybook",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "main": "./src/index.ts",
@@ -29,6 +29,13 @@
           "ci": {
             "quiet": true
           }
+        }
+      },
+      "version": {
+        "executor": "@jscutlery/semver:version",
+        "options": {
+          "preset": "angular",
+          "commitMessageFormat": "ci(design system): release version {version}"
         }
       }
     }

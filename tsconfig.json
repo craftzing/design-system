@@ -4,24 +4,17 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/button"
+      "path": "./packages/design-system"
     },
     {
-      "path": "./packages/common"
+      "path": "./packages/tokens"
     },
     {
       "path": "./libs/storybook"
     },
     {
-      "path": "./libs/styles"
-    },
-    {
-      "path": "./libs/tokens"
+      "path": "./packages/core"
     }
   ],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  }
+  "exclude": ["node_modules"]
 }
