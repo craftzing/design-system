@@ -10,7 +10,13 @@
       "path": "./packages/common"
     },
     {
-      "path": "./lib/storybook"
+      "path": "./libs/storybook"
+    },
+    {
+      "path": "./libs/styles"
+    },
+    {
+      "path": "./libs/tokens"
     }
   ],
   "ts-node": {

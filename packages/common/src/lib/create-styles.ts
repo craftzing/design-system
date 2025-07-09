@@ -1,30 +1,15 @@
-import { css, unsafeCSS } from "lit";
+import { css, CSSResult, unsafeCSS } from 'lit';
 
-const { warn } = console;
+/**
+ * Lit mimics spec bahviour by default.
+ * When supported, styling will be added using CSSStyleSheets.
+ * When not supported, styling will be added using style tags.
+ *
+ * Source code: https://github.com/lit/lit-element/blob/f2184da66a7b0c692d32c25d99aa00d7fc45e5bf/src/lit-element.ts#L249
+ */
 
-const hasConstructableStylesheetsSupport = () =>
-  typeof window !== "undefined" &&
-  "CSSStyleSheet" in window &&
-  "adoptedStyleSheets" in Document.prototype &&
-  "replaceSync" in CSSStyleSheet.prototype;
-
-export const createStyles = (cssText: string) => {
-  if (!hasConstructableStylesheetsSupport()) {
-    return css`
-      ${unsafeCSS(cssText)}
-    `;
-  }
-
-  try {
-    const sheet = new CSSStyleSheet();
-    sheet.replaceSync(cssText);
-    return css`
-      ${unsafeCSS(cssText)}
-    `;
-  } catch (error) {
-    warn("Failed to create CSSStyleSheet:", error);
-    return css`
-      ${unsafeCSS(cssText)}
-    `;
-  }
+export const createStyles = (cssText: string): CSSResult => {
+  return css`
+    ${unsafeCSS(cssText)}
+  `;
 };

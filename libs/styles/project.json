@@ -1,0 +1,9 @@
+{
+  "name": "@design-system/styles",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/styles/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project @design-system/styles --web",
+  "targets": {}
+}
